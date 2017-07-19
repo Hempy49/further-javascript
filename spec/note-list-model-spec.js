@@ -1,16 +1,11 @@
 var note = new Note("Too sexy to code");
 var noteList = new NoteList();
 
-
-function testNoteList(){
+it("test note list", function () {
   assert.isTrue(Array.isArray(noteList.noteModels));
-};
+});
 
-testNoteList();
-
-function testNoteInArray(){
+it("test note in array", function () {
   noteList.pushToNoteModels(note);
   assert.isTrue(noteList.noteModels.length === 1);
-};
-
-testNoteInArray();
+});

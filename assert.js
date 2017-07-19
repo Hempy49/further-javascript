@@ -5,3 +5,8 @@ var assert = {
     }
   }
 };
+
+function it(text, callback) {
+  callback();
+  console.log("Test passed: " + text)
+}
