@@ -1,18 +1,18 @@
-// it("Note controller is instantiated", function () {
-//   noteController = new NoteController();
-//   assertNotNull(noteController.newNote);
-//   assertNotNull(noteController.noteList);
-//   assertNotNull(noteController.noteListView);
-// });
+it("Note controller is instantiated", function () {
+var noteControllerTest = new NoteController();
+assertNotNull(noteControllerTest.noteList);
+assertNotNull(noteControllerTest.noteListView);
+});
 
-// it("description", function () {
-//   noteController = new NoteController();
-//   htmlElementDouble = document.createElement('div');
-//   // htmlElementDouble.innerHTML = "string"
-//   // console.log(htmlElementDouble)
-//   // document.getElementById = htmlElementDouble
-//   noteController.htmlElementDouble.innerHtml = noteController.getHtml();
-//   console.log(noteController.getHtml());
-//   console.log(htmlElementDouble.innerHTML)
-//   assert.isTrue(htmlElementDouble.innerHTML === "<ul><li><div>Favourite drink: seltzer</div></li></ul>")
-// });
+
+it("sets the correct HTML text", function() {
+var newNoteTest = new Note("It's thursday");
+var noteListTest = new NoteList();
+noteListTest.pushToNoteModels(newNoteTest);
+var noteControllerTest = new NoteController(noteListTest)
+dummyElement = document.createElement('div')
+dummyElement.innerHTML = "this is a test"
+var htmlResult = "<ul><li><div>It's thursday</div></li></ul>";
+noteControllerTest.getHtml(dummyElement)
+assert.isTrue(dummyElement.innerHTML === htmlResult);
+});
