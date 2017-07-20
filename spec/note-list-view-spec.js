@@ -1,5 +1,4 @@
-(function() {
-  
+(function() {  
   var note = new Note("Note message");
   var noteList = new NoteList();
   var noteListView = new NoteListView(noteList);
