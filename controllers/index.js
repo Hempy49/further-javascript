@@ -30,8 +30,8 @@ function showNote(id) {
       noteText = note.text;
     }
   });
-  
+
   document
-  .getElementById("note")
+  .getElementById("app")
   .innerHTML = noteText;
 };
